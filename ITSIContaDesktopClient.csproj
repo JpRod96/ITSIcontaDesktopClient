@@ -167,6 +167,11 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="Migrations\20200503201749_InitialCreate.cs" />
+    <Compile Include="Migrations\20200503201749_InitialCreate.designer.cs">
+      <DependentUpon>20200503201749_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\LocalContextModelSnapshot.cs" />
     <Compile Include="PersistenceConfigurations\LocalContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
