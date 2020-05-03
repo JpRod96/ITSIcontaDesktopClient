@@ -160,11 +160,11 @@
   <ItemGroup>
     <Compile Include="Entities\User\Role.cs" />
     <Compile Include="Entities\User\User.cs" />
-    <Compile Include="FormsViews\Form1.cs">
+    <Compile Include="FormsViews\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsViews\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormsViews\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Migrations\20200503201749_InitialCreate.cs" />
@@ -175,6 +175,9 @@
     <Compile Include="PersistenceConfigurations\LocalContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormsViews\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -12,7 +12,7 @@ namespace ITSIContaDesktopClient.PersistenceConfigurations
     {
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
-        private string connectionString = String.Format("Data Source = {0}.db", Global.DB_NAME);
+        private readonly string connectionString = String.Format("Data Source = {0}.db", Global.DB_NAME);
         protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite(connectionString);
     }
 }
