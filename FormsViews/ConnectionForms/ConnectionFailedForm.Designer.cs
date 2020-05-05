@@ -95,7 +95,7 @@
             this.serverLinkLbl.TabStop = true;
             this.serverLinkLbl.Tag = "";
             this.serverLinkLbl.Text = "www.itsisrl.com";
-            this.serverLinkLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.serverLinkLbl_LinkClicked);
+            this.serverLinkLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ServerLinkLbl_LinkClicked);
             // 
             // ConnectionFailedForm
             // 

@@ -9,7 +9,7 @@ namespace ITSIContaDesktopClient.Services
 {
     class APIService
     {
-        private HttpClient HttpClient;
+        private readonly HttpClient HttpClient;
 
         public APIService()
         {

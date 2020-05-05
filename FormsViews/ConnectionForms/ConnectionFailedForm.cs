@@ -35,9 +35,9 @@ namespace ITSIContaDesktopClient.FormsViews.ConnectionForms
             Application.Exit();
         }
 
-        private void serverLinkLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void ServerLinkLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://itsisrl.com");
+            System.Diagnostics.Process.Start(Global.APIURL);
         }
     }
 }
