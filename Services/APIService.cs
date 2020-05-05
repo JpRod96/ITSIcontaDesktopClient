@@ -18,8 +18,16 @@ namespace ITSIContaDesktopClient.Services
 
         public async Task<bool> IsServerUp()
         {
-            var checkingResponse = await HttpClient.GetAsync("");
-            return checkingResponse.IsSuccessStatusCode;
+            try
+            {
+                var checkingResponse = await HttpClient.GetAsync("");
+                return checkingResponse.IsSuccessStatusCode;
+            }
+            catch(Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+                return false;
+            }
         }
     }
 }

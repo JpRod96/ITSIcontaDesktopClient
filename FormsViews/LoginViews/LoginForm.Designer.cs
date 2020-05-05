@@ -1,6 +1,6 @@
 ﻿namespace ITSIContaDesktopClient
 {
-    partial class Login
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Login
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Login";
-            this.Text = "Iniciar Sesion";
+            this.Name = "LoginForm";
+            this.Text = "Iniciar Sesión";
             this.Shown += new System.EventHandler(this.Login_Shown);
             this.ResumeLayout(false);
 

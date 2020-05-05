@@ -50,7 +50,7 @@
             this.MsgLbl.Name = "MsgLbl";
             this.MsgLbl.Size = new System.Drawing.Size(284, 34);
             this.MsgLbl.TabIndex = 1;
-            this.MsgLbl.Text = "Comprobando su conexión a internet. \r\n            Un momento, por favor...";
+            this.MsgLbl.Text = "Comprobando su conexión a internet. \r\n           Un momento, por favor...";
             // 
             // CheckingConnectionForm
             // 
@@ -58,11 +58,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(314, 207);
+            this.ControlBox = false;
             this.Controls.Add(this.MsgLbl);
             this.Controls.Add(this.loadingPicBox);
             this.Name = "CheckingConnectionForm";
-            this.Text = "Comprobando conexion a internet";
+            this.Text = "Comprobando la conexión a internet";
+            this.Activated += new System.EventHandler(this.CheckingConnectionForm_Activated);
             this.Load += new System.EventHandler(this.CheckingConnectionForm_Load);
+            this.Shown += new System.EventHandler(this.CheckingConnectionForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.loadingPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

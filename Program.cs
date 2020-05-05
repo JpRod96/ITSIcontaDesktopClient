@@ -21,7 +21,7 @@ namespace ITSIContaDesktopClient
             Global.Db = new LocalContext();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new LoginForm());
         }
 
         private static void InitializeHttpClient()
