@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ITSIContaDesktopClient
+namespace ITSIContaDesktopClient.FormsViews.LoginViews
 {
-    public partial class Login : Form
+    public partial class CheckingConnectionForm : Form
     {
-        public Login()
+        public CheckingConnectionForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void CheckingConnectionForm_Load(object sender, EventArgs e)
         {
-
+            loadingPicBox.SizeMode = PictureBoxSizeMode.CenterImage;
         }
     }
 }

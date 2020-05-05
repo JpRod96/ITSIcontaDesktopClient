@@ -1,6 +1,9 @@
-﻿using System;
+﻿using ITSIContaDesktopClient.PersistenceConfigurations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,9 +17,23 @@ namespace ITSIContaDesktopClient
         [STAThread]
         static void Main()
         {
+            InitializeHttpClient();
+            Global.Db = new LocalContext();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
+        }
+
+        private static void InitializeHttpClient()
+        {
+            HttpClient APIClient = new HttpClient
+            {
+                BaseAddress = new Uri(Global.APIURL)
+            };
+            APIClient.DefaultRequestHeaders.Accept.Clear();
+            APIClient.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            Global.APIClient = APIClient;
         }
     }
 }
