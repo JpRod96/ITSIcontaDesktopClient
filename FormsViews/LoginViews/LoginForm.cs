@@ -1,5 +1,6 @@
 ﻿using ITSIContaDesktopClient.Controllers;
 using ITSIContaDesktopClient.FormsViews.LoginViews;
+using ITSIContaDesktopClient.FormsViews.MaterialSkinConfig;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
@@ -31,21 +32,13 @@ namespace ITSIContaDesktopClient
 
         private void BeforeShown()
         {
-            MaterialConfig();
+            MaterialFormManager.FormConfig(this);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
             presIconPicBox.SizeMode = PictureBoxSizeMode.StretchImage;
             userNameTxtBox.Text = USERNAME_DEFAULT_TEXT;
             passwordTxtBox.Text = PASSWORD_DEFAULT_TEXT;
             passwordContent = "";
-        }
-
-        private void MaterialConfig()
-        {
-            var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
         private void Login_Shown(object sender, EventArgs e)

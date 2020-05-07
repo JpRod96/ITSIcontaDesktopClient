@@ -1,4 +1,5 @@
 ﻿using ITSIContaDesktopClient.FormsViews.ConnectionForms;
+using ITSIContaDesktopClient.FormsViews.MaterialSkinConfig;
 using ITSIContaDesktopClient.Services;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -26,20 +27,11 @@ namespace ITSIContaDesktopClient.FormsViews.LoginViews
         private void BeforeShown()
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            MaterialConfig();
-        }
-
-        private void MaterialConfig()
-        {
-            var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            MaterialFormManager.FormConfig(this);
         }
 
         private void CheckingConnectionForm_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
             loadingPicBox.SizeMode = PictureBoxSizeMode.CenterImage;
         }
 

@@ -185,6 +185,7 @@
     <Compile Include="FormsViews\LoginViews\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsViews\MaterialSkinConfig\MaterialFormManager.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Migrations\20200503201749_InitialCreate.cs" />
     <Compile Include="Migrations\20200503201749_InitialCreate.designer.cs">
