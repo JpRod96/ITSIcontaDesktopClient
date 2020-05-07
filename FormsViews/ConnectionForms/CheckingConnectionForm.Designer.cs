@@ -36,7 +36,7 @@
             // loadingPicBox
             // 
             this.loadingPicBox.Image = global::ITSIContaDesktopClient.Properties.Resources.loadingGif;
-            this.loadingPicBox.Location = new System.Drawing.Point(62, 12);
+            this.loadingPicBox.Location = new System.Drawing.Point(66, 80);
             this.loadingPicBox.Name = "loadingPicBox";
             this.loadingPicBox.Size = new System.Drawing.Size(185, 116);
             this.loadingPicBox.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             this.MsgLbl.AutoSize = true;
             this.MsgLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MsgLbl.Location = new System.Drawing.Point(12, 143);
+            this.MsgLbl.Location = new System.Drawing.Point(12, 209);
             this.MsgLbl.Name = "MsgLbl";
             this.MsgLbl.Size = new System.Drawing.Size(284, 34);
             this.MsgLbl.TabIndex = 1;
@@ -57,7 +57,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(314, 207);
+            this.ClientSize = new System.Drawing.Size(320, 270);
             this.ControlBox = false;
             this.Controls.Add(this.MsgLbl);
             this.Controls.Add(this.loadingPicBox);

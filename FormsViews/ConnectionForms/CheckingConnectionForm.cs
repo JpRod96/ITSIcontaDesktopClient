@@ -1,5 +1,7 @@
 ﻿using ITSIContaDesktopClient.FormsViews.ConnectionForms;
 using ITSIContaDesktopClient.Services;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +15,7 @@ using System.Windows.Forms;
 
 namespace ITSIContaDesktopClient.FormsViews.LoginViews
 {
-    public partial class CheckingConnectionForm : Form
+    public partial class CheckingConnectionForm : MaterialForm
     {
         public CheckingConnectionForm()
         {
@@ -24,6 +26,15 @@ namespace ITSIContaDesktopClient.FormsViews.LoginViews
         private void BeforeShown()
         {
             this.StartPosition = FormStartPosition.CenterScreen;
+            MaterialConfig();
+        }
+
+        private void MaterialConfig()
+        {
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
         private void CheckingConnectionForm_Load(object sender, EventArgs e)
