@@ -1,4 +1,6 @@
 ﻿using ITSIContaDesktopClient.FormsViews.LoginViews;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +13,7 @@ using System.Windows.Forms;
 
 namespace ITSIContaDesktopClient.FormsViews.ConnectionForms
 {
-    public partial class ConnectionFailedForm : Form
+    public partial class ConnectionFailedForm : MaterialForm
     {
         public ConnectionFailedForm()
         {
@@ -21,8 +23,16 @@ namespace ITSIContaDesktopClient.FormsViews.ConnectionForms
 
         private void BeforeShown()
         {
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.StartPosition = FormStartPosition.CenterScreen;
+            MaterialConfig();
+        }
+
+        private void MaterialConfig()
+        {
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
         private void TryAgainBtn_Click(object sender, EventArgs e)

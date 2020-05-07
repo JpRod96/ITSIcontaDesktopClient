@@ -40,7 +40,7 @@
             // 
             this.MsgLbl.AutoSize = true;
             this.MsgLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MsgLbl.Location = new System.Drawing.Point(28, 50);
+            this.MsgLbl.Location = new System.Drawing.Point(29, 127);
             this.MsgLbl.Name = "MsgLbl";
             this.MsgLbl.Size = new System.Drawing.Size(311, 136);
             this.MsgLbl.TabIndex = 2;
@@ -52,7 +52,7 @@
             this.tryAgainBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tryAgainBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tryAgainBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tryAgainBtn.Location = new System.Drawing.Point(114, 210);
+            this.tryAgainBtn.Location = new System.Drawing.Point(117, 292);
             this.tryAgainBtn.Name = "tryAgainBtn";
             this.tryAgainBtn.Size = new System.Drawing.Size(133, 36);
             this.tryAgainBtn.TabIndex = 3;
@@ -64,7 +64,7 @@
             // 
             this.tittleLbl.AutoSize = true;
             this.tittleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tittleLbl.Location = new System.Drawing.Point(11, 9);
+            this.tittleLbl.Location = new System.Drawing.Point(12, 86);
             this.tittleLbl.Name = "tittleLbl";
             this.tittleLbl.Size = new System.Drawing.Size(351, 24);
             this.tittleLbl.TabIndex = 4;
@@ -76,7 +76,7 @@
             this.exitProgramBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitProgramBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitProgramBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.exitProgramBtn.Location = new System.Drawing.Point(104, 262);
+            this.exitProgramBtn.Location = new System.Drawing.Point(107, 344);
             this.exitProgramBtn.Name = "exitProgramBtn";
             this.exitProgramBtn.Size = new System.Drawing.Size(153, 36);
             this.exitProgramBtn.TabIndex = 5;
@@ -88,7 +88,7 @@
             // 
             this.serverLinkLbl.AutoSize = true;
             this.serverLinkLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serverLinkLbl.Location = new System.Drawing.Point(101, 134);
+            this.serverLinkLbl.Location = new System.Drawing.Point(102, 211);
             this.serverLinkLbl.Name = "serverLinkLbl";
             this.serverLinkLbl.Size = new System.Drawing.Size(101, 17);
             this.serverLinkLbl.TabIndex = 6;
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 316);
+            this.ClientSize = new System.Drawing.Size(367, 415);
             this.ControlBox = false;
             this.Controls.Add(this.serverLinkLbl);
             this.Controls.Add(this.exitProgramBtn);
