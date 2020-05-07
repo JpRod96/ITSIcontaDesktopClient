@@ -63,9 +63,9 @@ namespace ITSIContaDesktopClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Loading {
+        internal static System.Drawing.Bitmap loadingGif {
             get {
-                object obj = ResourceManager.GetObject("Loading", resourceCulture);
+                object obj = ResourceManager.GetObject("loadingGif", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace ITSIContaDesktopClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap loadingGif {
+        internal static System.Drawing.Bitmap presentationIcon {
             get {
-                object obj = ResourceManager.GetObject("loadingGif", resourceCulture);
+                object obj = ResourceManager.GetObject("presentationIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -14,7 +14,7 @@ namespace ITSIContaDesktopClient
         public const string DB_NAME = "ITSIconta";
         public const string APIURL = "http://localhost:8080/";
         public static string APIToken = "";
-        public static bool isConnected = true;
+        public static bool isConnected = false;
         public static HttpClient APIClient;
         public static LocalContext Db;
     }
