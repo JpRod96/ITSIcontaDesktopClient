@@ -1,4 +1,5 @@
 ﻿using ITSIContaDesktopClient.Controllers;
+using ITSIContaDesktopClient.Entities.User;
 using ITSIContaDesktopClient.FormsViews.LoginViews;
 using ITSIContaDesktopClient.FormsViews.MaterialSkinConfig;
 using MaterialSkin;
@@ -17,6 +18,7 @@ namespace ITSIContaDesktopClient
 {
     public partial class LoginForm : MaterialForm
     {
+        private readonly ConnectionController connectionController;
         private readonly UserController userController;
         private const string EMPTY_TEXT = "";
         private const string USERNAME_DEFAULT_TEXT = "Nombre de usuario";
@@ -25,6 +27,7 @@ namespace ITSIContaDesktopClient
 
         public LoginForm()
         {
+            connectionController = new ConnectionController();
             userController = new UserController();
             InitializeComponent();
             BeforeShown();
@@ -84,6 +87,20 @@ namespace ITSIContaDesktopClient
                 content = content.Equals(EMPTY_TEXT) ? defaultText : content;
             }
             textBox.Text = content;
+        }
+
+        private async void LogInBtn_Click(object sender, EventArgs e)
+        {
+            User credentials = new User()
+            {
+                Username = userNameTxtBox.Text,
+                Password = passwordTxtBox.Text
+            };
+            bool succesfulLogin = await connectionController.LoginOnServer(credentials);
+            if (succesfulLogin)
+            {
+                var users = await userController.GetAllFromAPI();
+            }
         }
     }
 }

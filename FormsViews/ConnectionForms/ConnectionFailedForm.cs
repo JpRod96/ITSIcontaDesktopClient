@@ -1,4 +1,5 @@
 ﻿using ITSIContaDesktopClient.FormsViews.LoginViews;
+using ITSIContaDesktopClient.FormsViews.MaterialSkinConfig;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
@@ -24,15 +25,7 @@ namespace ITSIContaDesktopClient.FormsViews.ConnectionForms
         private void BeforeShown()
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            MaterialConfig();
-        }
-
-        private void MaterialConfig()
-        {
-            var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            MaterialFormManager.FormConfig(this);
         }
 
         private void TryAgainBtn_Click(object sender, EventArgs e)

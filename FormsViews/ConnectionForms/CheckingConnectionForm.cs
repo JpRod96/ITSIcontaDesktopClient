@@ -1,4 +1,5 @@
-﻿using ITSIContaDesktopClient.FormsViews.ConnectionForms;
+﻿using ITSIContaDesktopClient.Controllers;
+using ITSIContaDesktopClient.FormsViews.ConnectionForms;
 using ITSIContaDesktopClient.FormsViews.MaterialSkinConfig;
 using ITSIContaDesktopClient.Services;
 using MaterialSkin;
@@ -18,6 +19,7 @@ namespace ITSIContaDesktopClient.FormsViews.LoginViews
 {
     public partial class CheckingConnectionForm : MaterialForm
     {
+        private ConnectionController connectionController;
         public CheckingConnectionForm()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace ITSIContaDesktopClient.FormsViews.LoginViews
         {
             this.StartPosition = FormStartPosition.CenterScreen;
             MaterialFormManager.FormConfig(this);
+            connectionController = new ConnectionController();
         }
 
         private void CheckingConnectionForm_Load(object sender, EventArgs e)
@@ -42,8 +45,7 @@ namespace ITSIContaDesktopClient.FormsViews.LoginViews
 
         public async void CheckConnection()
         {
-            APIService connectionCheckr = new APIService();
-            if (await connectionCheckr.IsServerUp())
+            if (await connectionController.IsServerUp())
             {
                 this.Close();
             }

@@ -1,4 +1,5 @@
-﻿using ITSIContaDesktopClient.Services;
+﻿using ITSIContaDesktopClient.Entities.User;
+using ITSIContaDesktopClient.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,11 @@ namespace ITSIContaDesktopClient.Controllers
         public bool IsFirstRun()
         {
             return userService.AreThereAnyUserOnLocalDb();
+        }
+
+        public async Task<List<User>> GetAllFromAPI()
+        {
+            return await userService.GetAllUsersFromAPI();
         }
     }
 }
